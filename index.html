@@ -30,9 +30,51 @@
             display: none !important;
         }
 
-        img.navbar  {
+        img.navbar {
             height: 50px;
             width: auto;
+        }
+
+        /* Make the navbar logo smaller */
+        /* .navbar img {
+            height: 40px;
+            width: auto;
+        } */
+
+        /* Add spacing inside the header/hero content */
+        .header-content {
+            padding: 2rem 1rem;
+        }
+
+        /* Adjust text size in header for small screens */
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 1.3rem;
+                line-height: 1.4;
+            }
+
+            .header-content p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            /* Stack buttons vertically and full-width */
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Add breathing space below hero image */
+            .carousel-item img {
+                height: auto;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
@@ -53,10 +95,9 @@
                         <!--Logo Box-->
                         <div class="logo-box">
                             <div class="logo"><a href="index.html"><img
-                                        src="images/pic/ChatGPT Image May 11, 2025, 07_06_12 PM.png" alt="" class="navbar"></a></div>
+                                        src="images/pic/ChatGPT Image May 11, 2025, 07_06_12 PM.png" alt=""
+                                        class="navbar"></a></div>
                         </div>
-
-
                         <!--Nav Outer-->
                         <div class="nav-outer clearfix">
                             <!-- Main Menu -->
@@ -136,7 +177,8 @@
                                 <h2>Give Back To the Nature & Save Environment</h2>
                             </div>
 
-                            <div style="padding-bottom: 100px !important;" class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            <div style="padding-bottom: 100px !important;" class="tp-caption"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                                 data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
                                 data-type="text" data-height="none" data-width="['650','650','600','460']"
                                 data-whitespace="normal" data-hoffset="['15','15','15','15']"
