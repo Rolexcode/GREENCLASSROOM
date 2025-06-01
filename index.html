@@ -125,6 +125,132 @@
                 text-align: center !important;
             }
         }
+
+
+        /* General Layout */
+        .quiz-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Question styling */
+        #quiz-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: left;
+            padding: 10px 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .option-btn:hover:not(:disabled) {
+            background-color: #e9ecef;
+        }
+
+        /* Next button */
+        #next-btn {
+            margin-top: 15px;
+        }
+
+        /* Result box */
+        #quiz-result {
+            display: none;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        /* Score text */
+        #score-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Level selector */
+        #level-select {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .level-btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        /* Disable level button appearance */
+        .level-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .quiz-container,
+            #level-select {
+                padding: 15px;
+            }
+
+            #quiz-question {
+                font-size: 1.1rem;
+            }
+
+            .option-btn {
+                font-size: 0.95rem;
+                padding: 10px 12px;
+            }
+
+            #score-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        .green-pledge-section {
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            padding: 60px 20px;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .green-pledge-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .green-pledge-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .green-pledge-section .btn {
+            font-weight: 600;
+            padding: 10px 25px;
+            font-size: 1rem;
+        }
     </style>
 
 </head>
@@ -167,6 +293,7 @@
                                         <li><a href="index.html">HOME</a></li>
                                         <li><a href="#learn">LEARN</a></li>
                                         <li><a href="contact.html">QUIZ</a></li>
+                                        <li><a href="#quiz">QUIZ</a></li>
                                         <li><a href="#about">ABOUT</a></li>
                                     </ul>
                                 </div>
@@ -500,6 +627,40 @@
                     <!--Column-->
                     <div class="event-column col-md-4 col-sm-12 col-xs-12">
                         <H1>SOMETHING ELSE HERE</H1>
+        <!-- ================== QUIZ SECTION ================== -->
+        <section id="quiz-section" class="container mt-5 mb-4">
+            <div class="row" id="quiz">
+                <!-- Left Column: Levels -->
+                <div class="col-md-4 mb-4">
+                    <h3 class="text-center">Select Level</h3>
+                    <div id="level-buttons" class="d-flex flex-column align-items-center gap-2">
+                        <button class="level-btn btn btn-outline-success w-100" data-level="1">Level 1</button>
+                        <button class="level-btn btn btn-outline-secondary w-100" data-level="2" disabled>Level
+                            2</button>
+                        <button class="level-btn btn btn-outline-secondary w-100" data-level="3" disabled>Level
+                            3</button>
+                        <button class="level-btn btn btn-outline-secondary w-100" data-level="4" disabled>Level
+                            4</button>
+                        <button class="level-btn btn btn-outline-secondary w-100" data-level="5" disabled>Level
+                            5</button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Quiz Box -->
+                <div class="col-md-8">
+                    <h3 class="text-center">Quiz</h3>
+                    <div id="quiz-box" class="quiz-box">
+                        <div id="quiz-question" class="question-text"></div>
+                        <div id="quiz-options" class="options-list"></div>
+                        <button id="next-btn" class="btn btn-primary mt-3" style="display:none;">Next</button>
+                    </div>
+
+                    <!-- Result -->
+                    <div id="quiz-result" class="quiz-result text-center mt-4" style="display:none;">
+                        <h4 id="score-text"></h4>
+                        <button id="retry-btn" class="btn btn-secondary">Retry Level</button>
+                        <button id="next-level-btn" class="btn btn-success" style="display:none;">Unlock Next
+                            Level</button>
                     </div>
                 </div>
             </div>
@@ -519,6 +680,12 @@
             </div>
         </section>
         <!--End Call To Action Section-->
+        <!-- ================== END QUIZ SECTION ================== -->
+
+        </section>
+        <!--End News Section-->
+
+
         <!--Main Footer-->
         <section class="main-footer" id="about">
             <div class="auto-container">
@@ -549,6 +716,7 @@
                                 <ul class="list-style-two">
                                     <li><span class="icon flaticon-maps-and-flags"></span>LAGOS STATE UNIVERSITY EPE
                                         CAMPUS</li>
+
                                     <li><span class="icon flaticon-phone-call"></span>(880) 1723801729</li>
                                     <li><span class="icon flaticon-clock-1"></span>Info@gogreen.com <br>
                                         Support@gogreen.com</li>
@@ -590,6 +758,118 @@
     <script src="js/appear.js"></script>
     <script src="js/isotope.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+        const quizData = {
+            1: [
+                { q: "What is climate change?", options: ["Weather change", "Long-term changes in temperature and weather patterns", "Seasonal shift", "Ozone healing"], answer: 1 },
+                { q: "What gas contributes most to global warming?", options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"], answer: 1 },
+                { q: "Which activity reduces carbon footprint?", options: ["Driving solo", "Using public transport", "Burning waste", "None"], answer: 1 },
+                { q: "What is renewable energy?", options: ["Coal", "Diesel", "Solar", "Petrol"], answer: 2 },
+                { q: "Trees help the climate by?", options: ["Releasing CO2", "Cooling Earth", "Blocking wind", "None"], answer: 1 },
+                { q: "Which is a greenhouse gas?", options: ["Carbon Dioxide", "Argon", "Helium", "Neon"], answer: 0 },
+                { q: "Main cause of sea-level rise?", options: ["Earthquake", "Volcanos", "Ice melting", "Moon gravity"], answer: 2 },
+                { q: "Deforestation affects climate by?", options: ["Cooling Earth", "Stabilizing air", "Increasing CO2", "Helping oceans"], answer: 2 },
+                { q: "Best example of recycling?", options: ["Burning plastic", "Reusing bottles", "Throwing cans", "Using paper plates"], answer: 1 },
+                { q: "Which sector emits most GHGs?", options: ["Agriculture", "Transport", "Energy", "Tourism"], answer: 2 }
+            ],
+            2: [/* 10 Questions */],
+            3: [/* 10 Questions */],
+            4: [/* 10 Questions */],
+            5: [/* 10 Questions */]
+        };
+
+        let currentLevel = 1;
+        let currentQuestion = 0;
+        let score = 0;
+
+        const quizBox = document.getElementById('quiz-box');
+        const questionText = document.getElementById('quiz-question');
+        const optionsList = document.getElementById('quiz-options');
+        const nextBtn = document.getElementById('next-btn');
+        const resultBox = document.getElementById('quiz-result');
+        const scoreText = document.getElementById('score-text');
+        const retryBtn = document.getElementById('retry-btn');
+        const nextLevelBtn = document.getElementById('next-level-btn');
+
+        function loadQuestion() {
+            const qData = quizData[currentLevel][currentQuestion];
+            questionText.textContent = `Q${currentQuestion + 1}: ${qData.q}`;
+            optionsList.innerHTML = '';
+
+            qData.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn btn btn-outline-dark mb-2 w-100 text-start';
+                btn.textContent = opt;
+                btn.onclick = () => selectAnswer(index);
+                optionsList.appendChild(btn);
+            });
+            nextBtn.style.display = "none";
+        }
+
+        function selectAnswer(selectedIndex) {
+            const correct = quizData[currentLevel][currentQuestion].answer;
+            const allOptions = document.querySelectorAll('.option-btn');
+
+            allOptions.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === correct) btn.classList.add('btn-success');
+                else if (i === selectedIndex) btn.classList.add('btn-danger');
+            });
+
+            if (selectedIndex === correct) score++;
+            nextBtn.style.display = "inline-block";
+        }
+
+        nextBtn.onclick = () => {
+            currentQuestion++;
+            if (currentQuestion < quizData[currentLevel].length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        };
+
+        function showResult() {
+            quizBox.style.display = "none";
+            resultBox.style.display = "block";
+            const passed = score >= 7;
+            scoreText.textContent = `You scored ${score}/10. ${passed ? "Well done!" : "Try again."}`;
+            retryBtn.style.display = "inline-block";
+            nextLevelBtn.style.display = passed && currentLevel < 5 ? "inline-block" : "none";
+        }
+
+        retryBtn.onclick = () => {
+            startLevel(currentLevel);
+        };
+
+        nextLevelBtn.onclick = () => {
+            const nextLevel = currentLevel + 1;
+            document.querySelector(`[data-level="${nextLevel}"]`).disabled = false;
+            startLevel(nextLevel);
+        };
+
+        function startLevel(level) {
+            currentLevel = level;
+            currentQuestion = 0;
+            score = 0;
+            quizBox.style.display = "block";
+            resultBox.style.display = "none";
+            loadQuestion();
+        }
+
+        document.querySelectorAll('.level-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const level = parseInt(btn.getAttribute('data-level'));
+                startLevel(level);
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            startLevel(1);
+        });
+    </script>
+
 </body>
 
 </html>
