@@ -292,7 +292,6 @@
                                     <ul class="navigation clearfix">
                                         <li><a href="index.html">HOME</a></li>
                                         <li><a href="#learn">LEARN</a></li>
-                                        <li><a href="contact.html">QUIZ</a></li>
                                         <li><a href="#quiz">QUIZ</a></li>
                                         <li><a href="#about">ABOUT</a></li>
                                     </ul>
@@ -615,22 +614,9 @@
 
 
         <!--News Section-->
-        <section class="news-section">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <!--Column-->
-                    <div class="column col-md-8 col-sm-12 col-xs-12">
-                        <!--Sec Title-->
-                        <H1>QUIZ HERE</H1>
-                        <!--News Block-->
-                    </div>
-                    <!--Column-->
-                    <div class="event-column col-md-4 col-sm-12 col-xs-12">
-                        <H1>SOMETHING ELSE HERE</H1>
         <!-- ================== QUIZ SECTION ================== -->
-        <section id="quiz-section" class="container mt-5 mb-4">
+        <section id="quiz-section" class="container my-5">
             <div class="row" id="quiz">
-                <!-- Left Column: Levels -->
                 <div class="col-md-4 mb-4">
                     <h3 class="text-center">Select Level</h3>
                     <div id="level-buttons" class="d-flex flex-column align-items-center gap-2">
@@ -646,9 +632,8 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Quiz Box -->
                 <div class="col-md-8">
-                    <h3 class="text-center">Quiz</h3>
+                    <h1 class="text-center"><b>QUIZ</b></h1>
                     <div id="quiz-box" class="quiz-box">
                         <div id="quiz-question" class="question-text"></div>
                         <div id="quiz-options" class="options-list"></div>
@@ -665,6 +650,7 @@
                 </div>
             </div>
         </section>
+
         <!--End News Section-->
 
         <!--Call To Action Section-->
@@ -717,9 +703,9 @@
                                     <li><span class="icon flaticon-maps-and-flags"></span>LAGOS STATE UNIVERSITY EPE
                                         CAMPUS</li>
 
-                                    <li><span class="icon flaticon-phone-call"></span>(880) 1723801729</li>
-                                    <li><span class="icon flaticon-clock-1"></span>Info@gogreen.com <br>
-                                        Support@gogreen.com</li>
+                                    <li><span class="icon flaticon-phone-call"></span>(234) 7058041930</li>
+                                    <li><span class="icon flaticon-message -1"></span>olaleyeolabodejeremiah@gmail.com <br>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -773,10 +759,54 @@
                 { q: "Best example of recycling?", options: ["Burning plastic", "Reusing bottles", "Throwing cans", "Using paper plates"], answer: 1 },
                 { q: "Which sector emits most GHGs?", options: ["Agriculture", "Transport", "Energy", "Tourism"], answer: 2 }
             ],
-            2: [/* 10 Questions */],
-            3: [/* 10 Questions */],
-            4: [/* 10 Questions */],
-            5: [/* 10 Questions */]
+            2: [
+                { q: "Which energy source is NOT renewable?", options: ["Solar", "Wind", "Coal", "Hydro"], answer: 2 },
+                { q: "What does 'carbon footprint' mean?", options: ["A type of shoeprint", "Amount of CO2 you emit", "A carbon stamp", "None of the above"], answer: 1 },
+                { q: "Which is a consequence of global warming?", options: ["More rainfall", "Melting glaciers", "Earthquakes", "More oxygen"], answer: 1 },
+                { q: "Which of these practices is sustainable?", options: ["Single-use plastics", "Organic farming", "Deforestation", "Overfishing"], answer: 1 },
+                { q: "What protects Earth from UV radiation?", options: ["Ozone layer", "Greenhouse gases", "Carbon dioxide", "Nitrogen"], answer: 0 },
+                { q: "Which is a form of clean transport?", options: ["Diesel cars", "Electric buses", "Gasoline bikes", "Helicopters"], answer: 1 },
+                { q: "Why are forests important?", options: ["Increase CO2", "Home for animals", "Cause droughts", "Create deserts"], answer: 1 },
+                { q: "What causes acid rain?", options: ["Carbon monoxide", "Sulfur dioxide", "Nitrogen", "Oxygen"], answer: 1 },
+                { q: "Which appliance uses the most energy?", options: ["LED bulb", "Electric heater", "Laptop", "Phone charger"], answer: 1 },
+                { q: "How can you save energy at home?", options: ["Leave lights on", "Use AC 24/7", "Unplug devices", "Boil water often"], answer: 2 }
+            ],
+            3: [
+                { q: "Which country emits the most CO2?", options: ["USA", "India", "China", "Russia"], answer: 2 },
+                { q: "What is the Kyoto Protocol?", options: ["Climate agreement", "Music album", "Energy drink", "Space mission"], answer: 0 },
+                { q: "What’s the purpose of solar panels?", options: ["Capture wind", "Store coal", "Generate electricity", "Create pollution"], answer: 2 },
+                { q: "Which of these is biodegradable?", options: ["Plastic", "Styrofoam", "Banana peel", "Glass"], answer: 2 },
+                { q: "Which farming method is eco-friendly?", options: ["Pesticide-heavy farming", "Monoculture", "Organic farming", "Slash-and-burn"], answer: 2 },
+                { q: "Why are coral reefs dying?", options: ["Too much salt", "Ocean acidification", "More dolphins", "Strong tides"], answer: 1 },
+                { q: "What's the goal of reforestation?", options: ["Cut more trees", "Grow forests back", "Increase urban space", "Make parking lots"], answer: 1 },
+                { q: "Which of these adds to e-waste?", options: ["Old phones", "Paper bags", "Plastic bottles", "Banana peels"], answer: 0 },
+                { q: "What's one effect of rising temperatures?", options: ["More crops", "Better snow", "Coral bleaching", "None"], answer: 2 },
+                { q: "Which helps reduce water waste?", options: ["Leaky taps", "Bucket baths", "Car washing daily", "Overwatering plants"], answer: 1 }
+            ],
+            4: [
+                { q: "What is the Paris Agreement?", options: ["Fashion event", "Climate treaty", "War pact", "Economic deal"], answer: 1 },
+                { q: "Which of these stores carbon?", options: ["Cars", "Factories", "Trees", "Airplanes"], answer: 2 },
+                { q: "What is composting?", options: ["Throwing trash", "Burning waste", "Making organic fertilizer", "None"], answer: 2 },
+                { q: "Which country uses the most renewable energy?", options: ["Germany", "USA", "Saudi Arabia", "Nigeria"], answer: 0 },
+                { q: "Which material takes longest to decompose?", options: ["Paper", "Banana peel", "Plastic bottle", "Cotton"], answer: 2 },
+                { q: "What is greenwashing?", options: ["Green painting", "Fake eco-claims", "Washing with plants", "Cleaning rivers"], answer: 1 },
+                { q: "What is the impact of microplastics?", options: ["No impact", "Help plants", "Harm marine life", "Make soil fertile"], answer: 2 },
+                { q: "What does 'net zero' mean?", options: ["No emissions at all", "Balancing emissions with removal", "Zero electricity", "Zero pollution"], answer: 1 },
+                { q: "Which is an effect of deforestation?", options: ["Cleaner air", "More oxygen", "Soil erosion", "Better farming"], answer: 2 },
+                { q: "What's the most eco-friendly lighting?", options: ["Halogen bulbs", "Candle", "LED", "Incandescent bulb"], answer: 2 }
+            ],
+            5: [
+                { q: "What is Earth Hour?", options: ["Gaming contest", "TV show", "Lights-off campaign", "Dance event"], answer: 2 },
+                { q: "Which gas is released from landfills?", options: ["Oxygen", "Methane", "Nitrogen", "Carbon monoxide"], answer: 1 },
+                { q: "What’s an example of upcycling?", options: ["Throwing bottles", "Burning waste", "Turning jeans into bags", "Using plastic plates"], answer: 2 },
+                { q: "Which ecosystem stores the most carbon?", options: ["Deserts", "Mangroves", "Mountains", "Plains"], answer: 1 },
+                { q: "Why are electric cars better?", options: ["Use more fuel", "Emit less CO2", "Slower", "More expensive"], answer: 1 },
+                { q: "What’s a circular economy?", options: ["Reuse and recycle", "Throw and buy", "Dig and burn", "Store and forget"], answer: 0 },
+                { q: "What is sustainable development?", options: ["Using all resources now", "Meeting needs without harming future", "Faster development", "More factories"], answer: 1 },
+                { q: "How can schools go green?", options: ["No recycling", "Energy-saving bulbs", "Paper waste", "More air conditioners"], answer: 1 },
+                { q: "What is an energy audit?", options: ["Electricity game", "Power analysis to save energy", "Money scam", "Solar test"], answer: 1 },
+                { q: "Which of these is most eco-friendly?", options: ["Plastic wrap", "Cloth bag", "Foam cup", "Aluminum foil"], answer: 1 }
+            ]
         };
 
         let currentLevel = 1;
